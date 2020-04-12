@@ -1,5 +1,16 @@
 
-import rain1
+import tensorflow as tf
+ 
+# 노드 생성
+hello = tf.constant("hello, TensorFlow!")
+# 세션 생성
+sess = tf.Session()
+# 세션 실행
+print(sess.run(hello))
+
+'''
+import fileUtil as
+ fu
 
 %load_ext memory_profiler
 %load_ext line_profiler
@@ -37,3 +48,4 @@ train_df.head()
 
 test_df.info()
 test_df.head()
+'''

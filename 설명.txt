@@ -1,0 +1,24 @@
+해결해야 하는 문제
+-     test.zip 파일 각각 픽셀별 강수량 산출
+
+데이터 설명
+-     GPM(Global Precipitation Measurement) Core 위성의 GMI/DPR 센서에서 북서태평양영역 (육지와 바다를 모두 포함) 에서 관측된 자료
+-     특정 orbit에서 기록된 자료를 40 X 40 형태로 분할(subset) 하여 제공
+-     subset_######_##.npy 파일로 제공되며, (height, width, channel) 형태
+-     ###### : 위성이 사용되기 시작한 이후로 몇 번째 지구를 돌았는지 나타내는 수(orbit 번호)
+-     ##: 해당 orbit에서 몇 번째 subset인지를 나타내는 수입니다. orbit별로 subset의 개수는 다를 수 있음 (subset 번호)
+-     데이터 출처 및 기타 세부사항은 토론 게시판의 pdf 자료 및 영상 자료 확인
+       -     pdf자료: https://dacon.io/competitions/official/235591/talkboard/400589
+       -     영상자료: https://dacon.io/competitions/official/235591/talkboard/400598
+
+train.zip
+-     2016~2018 년 관측된 자료 (76,345개)
+-     2016년 자료: orbit 번호 010462 ~ 016152 (25,653개)
+-     2017년 자료: orbit 번호 016154 ~ 021828 (25,197개)
+-     2018년 자료: orbit 번호 021835 ~ 027509 (25,495개)
+test.zip 
+-     2019년 관측된 자료 (2,416개)
+
+sample_submission.csv
+-     제출 양식 예시
+-     시각화 참조: https://dacon.io/competitions/official/235591/talkboard/400629
