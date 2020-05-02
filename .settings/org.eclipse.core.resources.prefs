@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+encoding//src/keras/checkpoint.py=utf-8
+encoding//src/keras/data_performance.py=utf-8
+encoding//src/keras/eager.py=utf-8
+encoding//src/keras/function.py=utf-8
+encoding//src/keras/gpu.py=utf-8
+encoding//src/keras/migrate.py=utf-8
+encoding//src/keras/ragged_tensor.py=utf-8
+encoding//src/keras/random_numbers.py=utf-8
+encoding//src/keras/saved_model.py=utf-8

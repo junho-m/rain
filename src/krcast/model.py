@@ -1,60 +1,23 @@
 '''
 Created on 2020. 5. 2.
 
-@author: truaea
+@author: moonjunho
 '''
-from tensorflow.keras.layers import Conv2D, Dropout, Conv2DTranspose, MaxPooling2D, BatchNormalization, concatenate, Input
-from tensorflow.keras import Model
 
-class MyModel(object):
-    '''
-    classdocs
-    '''
+from __future__ import absolute_import, division, print_function, unicode_literals, unicode_literals
+
+# tensorflow와 tf.keras를 임포트합니다
+import tensorflow as tf
+from tensorflow import keras
+
+# 헬퍼(helper) 라이브러리를 임포트합니다
+import numpy as np
+import matplotlib.pyplot as plt
+
+print(tf.__version__)
 
 
-    def __init__(self, params):
-        '''
-        Constructor
-        '''
-def build_model(input_layer, start_neurons):
-    
-    # 40 x 40 -> 20 x 20
-    conv1 = Conv2D(start_neurons * 1, (3, 3), activation="relu", padding="same")(input_layer)
-    conv1 = Conv2D(start_neurons * 1, (3, 3), activation="relu", padding="same")(conv1)
-    pool1 = BatchNormalization()(conv1)
-    pool1 = MaxPooling2D((2, 2))(pool1)
-    pool1 = Dropout(0.25)(pool1)
+fashion_mnist = keras.datasets.fashion_mnist
 
-    # 20 x 20 -> 10 x 10
-    conv2 = Conv2D(start_neurons * 2, (3, 3), activation="relu", padding="same")(pool1)
-    conv2 = Conv2D(start_neurons * 2, (3, 3), activation="relu", padding="same")(conv2)
-    pool2 = BatchNormalization()(conv2)
-    pool2 = MaxPooling2D((2, 2))(pool2)
-    pool2 = Dropout(0.25)(pool2)
+(train_images, train_labels), (test_images, test_labels) = fashion_mnist.load_data()
 
-    # 10 x 10 
-    convm = Conv2D(start_neurons * 4, (3, 3), activation="relu", padding="same")(pool2)
-
-    # 10 x 10 -> 20 x 20
-    deconv2 = Conv2DTranspose(start_neurons * 2, (3, 3), strides=(2, 2), padding="same")(convm)
-    uconv2 = concatenate([deconv2, conv2])
-    uconv2 = Dropout(0.25)(uconv2)
-    uconv2 = Conv2D(start_neurons * 2, (3, 3), activation="relu", padding="same")(uconv2)
-    uconv2 = Conv2D(start_neurons * 2, (3, 3), activation="relu", padding="same")(uconv2)
-    uconv2 = BatchNormalization()(uconv2)
-
-    # 20 x 20 -> 40 x 40
-    deconv1 = Conv2DTranspose(start_neurons * 1, (3, 3), strides=(2, 2), padding="same")(uconv2)
-    uconv1 = concatenate([deconv1, conv1])
-    uconv1 = Dropout(0.25)(uconv1)
-    uconv1 = Conv2D(start_neurons * 1, (3, 3), activation="relu", padding="same")(uconv1)
-    uconv1 = Conv2D(start_neurons * 1, (3, 3), activation="relu", padding="same")(uconv1)
-    uconv1 = BatchNormalization()(uconv1)
-    uconv1 = Dropout(0.25)(uconv1)
-    output_layer = Conv2D(1, (1,1), padding="same", activation='relu')(uconv1)
-    
-    return output_layer
-
-input_layer = Input((40, 40, 9))
-output_layer = build_model(input_layer, 32)
-model = Model(input_layer, output_layer)
