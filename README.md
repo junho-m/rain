@@ -3,15 +3,14 @@ About
 
 딥러닝으로 강수량을 예측해본다. 
 
-
 If you use the code or find it helpful, please cite the following paper:
 ```
-@inproceedings{juno1moon@gmail.com,
-    title={Deep learning for precipitation RainFall},
-    author={문준호},
-    booktitle={딥러닝 강수량 예측},
-    year={2020}
-}
+	@inproceedings{juno1moon@gmail.com,
+	    title={Deep learning for precipitation RainFall},
+	    author={문준호},
+	    booktitle={딥러닝 강수량 예측},
+	    year={2020}
+	}
 ```
 
 Installation
@@ -21,7 +20,7 @@ Installation
     
 os: windows10
 
-1. 아나콘다 설지
+1.아나콘다 설지
 
     ① 다운로드후 설지     
         https://www.anaconda.com/distribution/#download-section
@@ -38,18 +37,18 @@ os: windows10
            i. conda info –envs            
           ii. conda create --name rain python=3.7
             
-2. Git 생성
+2.Git 생성
 
     ①  https://github.com/
     
     ②  프로젝트 생성     
         예제) https://github.com/junho-m/rain
         
-3. 이클립스 생성
+3.이클립스 생성
 
     ① https://www.eclipse.org/downloads/packages/installer
 
-4. 이클립스 설정 
+4.이클립스 설정 
 
     ① Help>Eclipse Marketplace에서 PyDev 설치    
     ② PyDev,Git연결
@@ -102,7 +101,7 @@ NVIDA GPU설정(이부분은 안하셔도 됩니다.)
 
     https://developer.nvidia.com/cuda-toolkit-archive
     
-4. CuDNN 파일 다운
+4.CuDNN 파일 다운
 
     https://developer.nvidia.com/rdp/cudnn-archive
 
