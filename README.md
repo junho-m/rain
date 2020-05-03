@@ -106,4 +106,17 @@ NVIDA GPU설정(이부분은 안하셔도 됩니다.)
     https://developer.nvidia.com/rdp/cudnn-archive
 
 
+참고자료
+------------
 
+1.FORECA
+	
+	https://www.foreca.com/Korea/Seoul?map=rain
+	
+2.DACON ( 강수량 산출 대회 )
+
+	https://dacon.io/competitions/official/235591/data/
+
+3.참고소스 
+
+	https://github.com/sxjscience/HKO-7.git	
