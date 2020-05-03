@@ -71,7 +71,7 @@ warnings.filterwarnings("ignore")
 # 재생산성을 위해 시드 고정
 np.random.seed(7)
 random.seed(7)
-tf.random.set_random_seed(7)
+tf.random.set_seed(7)
 '''
 밝기 온도 채널만 사용해보기 위해 0~8 채널만 불러오기
 약 7만장의 전체 데이터를 사용하지 않고, 50개 이상의 픽셀에 강수량이 기록되어 있는 이미지만 사용해보기
@@ -124,7 +124,7 @@ Exploratory Data Analysis
 import seaborn as sns
 color_map = plt.cm.get_cmap('RdBu')
 color_map = color_map.reversed()
-image_sample = np.load('train/subset_010462_02.npy')
+image_sample = np.load('mnist/subset_010462_02.npy')
 #밝기 온도와 강수량과의 관계 확인해보기
 plt.style.use('fivethirtyeight')
 plt.figure(figsize=(30, 30))
