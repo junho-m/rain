@@ -91,7 +91,14 @@ PowerShell에서 작업을 진행한다.
 NVIDA GPU설정(이부분은 안하셔도 됩니다.) 
 ------------
 
-1.최신 드라이버 설치 
+1.최신 드라이버 설치 ( 드라이버 중에 CUDA 10.1 버전 호환되는 최종버전은 아래와 같다)
+
+    https://chan-lab.tistory.com/13?category=805685
+    
+	AnacondaAnaconda3-2019.03-Windows-x86_64
+	vs_community_2017_15.9.14
+	cuda_10.0.130_411.31_win10
+	cudnn-10.0-windows10-x64-v7.6.0.64
 
 2.Visual Studio 2017 설치하기
 
